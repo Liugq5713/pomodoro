@@ -19,8 +19,7 @@ export default class Home extends Component {
   render() {
     return(
       <div>
-      <Layout />
-        <div>Hssi</div>
+       <Layout />
       </div>
     ) 
   }

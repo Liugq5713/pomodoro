@@ -8,7 +8,6 @@ class App extends Component {
     return (
       <div className="App">
         <Home />
-        <button className="button is-dark"> 点击开始</button>
       </div>
     )
   }
