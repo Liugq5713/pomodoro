@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 // import { requestNotifyPermission, createNotification } from '../../utils/notify'
 import Layout from '../layout'
 
