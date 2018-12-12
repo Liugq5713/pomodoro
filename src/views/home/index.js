@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 // import { requestNotifyPermission, createNotification } from '../../utils/notify'
 import Layout from '../layout'
-import axios from 'axios'
 
 export default class Home extends Component {
   componentDidMount() {
@@ -12,15 +11,15 @@ export default class Home extends Component {
     //   img: 'dd'
     // }
     // createNotification(notification)
-    axios.get('http://localhost:5000/api/all').then(res=>{
-      console.log('res', res)
-    })
+    // axios.get('http://localhost:5000/api/all').then(res=>{
+    //   console.log('res', res)
+    // })
   }
   render() {
-    return(
+    return (
       <div>
-       <Layout />
+        <Layout />
       </div>
-    ) 
+    )
   }
 }
