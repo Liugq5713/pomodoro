@@ -1,18 +1,23 @@
 import React, { Component } from 'react'
 import Time from './time'
+import { createNotification } from 'utils/notify'
 
 export default class CountDown extends Component {
   constructor() {
     super()
+    this.timer = undefined
     this.state = {
-      m: 25,
-      s: 0
+      m: 0,
+      s: 10
     }
   }
 
   beginCountDown = () => {
-    setInterval(() => {
-      this.setMinuteAndSecond(this.state)
+    this.timer = setInterval(() => {
+      if (this.setMinuteAndSecond(this.state) === 0) {
+        clearInterval(this.timer)
+        createNotification({ title: '番茄', body: '25分钟到了' })
+      }
     }, 1000)
   }
 
@@ -20,8 +25,11 @@ export default class CountDown extends Component {
     if (s > 0) {
       this.setState({ s: s - 1 })
     } else {
-      this.setState({ m: m - 1, s: 59 })
+      if (m > 0) {
+        this.setState({ m: m - 1, s: 59 })
+      }
     }
+    return m + s
   }
 
   render() {
