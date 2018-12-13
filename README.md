@@ -6,7 +6,7 @@
 
 ## 项目技术栈
 
-本项目基于`create-react-app`脚手架构建
+本项目基于`create-react-app`脚手架构建，使用ui库[bulma](https://bulma.io/documentation/overview/start/)
 
 ## 文件结构
 
