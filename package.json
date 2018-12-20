@@ -2,6 +2,7 @@
   "name": "pomodoro",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://www.so-easy.cc/pomodoro/",
   "dependencies": {
     "axios": "^0.18.0",
     "bulma": "^0.7.2",
