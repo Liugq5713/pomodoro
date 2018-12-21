@@ -5,7 +5,7 @@ import './index.css'
 export default ({ m, s }) => {
   return (
     <div className="card-content">
-      <div className="time">
+      <div className="time has-text-dark">
         {m}:{pad(s)}
       </div>
     </div>

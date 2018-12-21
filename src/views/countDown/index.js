@@ -1,27 +1,28 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import Time from './time'
-import { createNotification } from 'utils/notify'
 
-export default class CountDown extends Component {
+class CountDown extends Component {
   constructor() {
     super()
     this.timer = undefined
     this.state = {
       m: 0,
-      s: 10
+      s: 2
     }
   }
 
   beginCountDown = () => {
     this.timer = setInterval(() => {
-      if (this.setMinuteAndSecond(this.state) === 0) {
+      if (this.start(this.state) === 0) {
         clearInterval(this.timer)
-        createNotification({ title: '番茄', body: '25分钟到了' })
+        console.log(' this.props', this.props)
+        this.props.history.push('/congratulation')
       }
     }, 1000)
   }
 
-  setMinuteAndSecond({ m, s }) {
+  start({ m, s }) {
     if (s > 0) {
       this.setState({ s: s - 1 })
     } else {
@@ -32,17 +33,30 @@ export default class CountDown extends Component {
     return m + s
   }
 
+  reset = () => {
+    clearInterval(this.timer)
+    this.setState({ m: 10, s: 0 })
+  }
+
   render() {
     const { m, s } = this.state
     return (
-      <div className="card has-background-grey">
+      <div className='card'>
         <Time m={m} s={s} />
-        <div className="has-text-centered">
-          <div className="button is-primary" onClick={this.beginCountDown}>
-            开始
+        <div className='has-text-centered'>
+          <div
+            className='button is-primary is-rounded'
+            onClick={this.beginCountDown}
+          >
+            START
+          </div>
+          <div className='button is-info is-rounded' onClick={this.reset}>
+            RESTART
           </div>
         </div>
       </div>
     )
   }
 }
+
+export default withRouter(CountDown)

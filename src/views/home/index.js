@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 // import { requestNotifyPermission, createNotification } from '../../utils/notify'
-import Layout from '../layout'
+import Layout from '../layout';
 
 export default class Home extends Component {
   componentDidMount() {
@@ -21,6 +21,6 @@ export default class Home extends Component {
       <div>
         <Layout />
       </div>
-    )
+    );
   }
 }
