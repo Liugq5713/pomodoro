@@ -16,7 +16,6 @@ class CountDown extends Component {
     this.timer = setInterval(() => {
       if (this.start(this.state) === 0) {
         clearInterval(this.timer)
-        console.log(' this.props', this.props)
         this.props.history.push('/congratulation')
       }
     }, 1000)
