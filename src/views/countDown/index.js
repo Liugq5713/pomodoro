@@ -41,7 +41,7 @@ class CountDown extends Component {
   render() {
     const { m, s } = this.state
     return (
-      <div className='card'>
+      <div>
         <Time m={m} s={s} />
         <div className='has-text-centered'>
           <div
