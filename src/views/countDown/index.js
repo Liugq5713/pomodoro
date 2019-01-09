@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import Time from './time'
 
+const buttonStyle = {
+  margin: '0px 10px',
+};
 class CountDown extends Component {
   constructor() {
     super()
@@ -45,6 +48,7 @@ class CountDown extends Component {
         <div className='has-text-centered'>
           <div
             className='button is-primary is-rounded'
+            style={buttonStyle}
             onClick={this.beginCountDown}
           >
             START
