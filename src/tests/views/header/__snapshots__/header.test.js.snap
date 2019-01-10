@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should have header every page 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar has-background-black-ter"
+  role="navigation"
+>
+  <div
+    className="navbar-brand"
+  >
+    <div
+      className="navbar-item is-paddingless"
+      href="https://github.com/Liugq5713"
+    >
+      <img
+        alt=""
+        className="svg"
+        height="28"
+        src="logo.svg"
+        width="112"
+      />
+    </div>
+    <a
+      aria-expanded="false"
+      aria-label="menu"
+      className="navbar-burger"
+      href="https://github.com/Liugq5713"
+      role="button"
+    >
+      <span
+        aria-hidden="true"
+      />
+      <span
+        aria-hidden="true"
+      />
+      <span
+        aria-hidden="true"
+      />
+    </a>
+  </div>
+</nav>
+`;

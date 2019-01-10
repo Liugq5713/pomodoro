@@ -3,8 +3,8 @@ import { withRouter } from 'react-router-dom'
 import Time from './time'
 
 const buttonStyle = {
-  margin: '0px 10px',
-};
+  margin: '0px 10px'
+}
 class CountDown extends Component {
   constructor() {
     super()
